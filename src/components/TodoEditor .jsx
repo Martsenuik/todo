@@ -5,5 +5,15 @@ export class TodoEditor extends React.Component {
     textValue: "",
   };
 
-  render() {}
+  render() {
+    return (
+      <>
+        <label>
+          створи ще одне завдання
+          <textarea></textarea>
+          <button>створити</button>
+        </label>
+      </>
+    );
+  }
 }
