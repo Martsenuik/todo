@@ -1,19 +1,25 @@
-export const TodoList = ({ TodoData }) => {
-  return (
-    <ul>
-      {TodoData.map((item) => {
-        return (
-          <>
-            <li>
-              <label>
-                <input type="checkbox" />
-                <p key={item.id}>{item.text}</p>
-                <button>delate</button> <br />
-              </label>
-            </li>
-          </>
-        );
-      })}
-    </ul>
-  );
-};
+import React from "react";
+
+export class TodoList extends React.Component {
+  render() {
+    return (
+      <ul>
+        {this.props.TodoData.map((item) => (
+          <li key={item.id}>
+            <label>
+              <input type="checkbox" />
+              <p>{item.text}</p>
+              <button
+                type="button"
+                onClick={() => this.props.DeleteToDo(item.id)}
+              >
+                delete
+              </button>
+              <br />
+            </label>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+}
