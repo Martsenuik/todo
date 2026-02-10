@@ -15,7 +15,7 @@ export class TodoEditor extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          створи ще одне завдання
+          створи одне завдання
           <textarea name="create" id="" cols="30"></textarea>
           <button type="submit">створити</button>
         </label>
